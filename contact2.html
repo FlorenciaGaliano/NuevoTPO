@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="stylecontact2.css">
     <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/6fa7f66f58.js" crossorigin="anonymous"></script>
-    <script src="appTPO2.js"></script>
-    <link rel="icon" href="/Imagenes/tambor.png"> dentro de head
+    
+    <link rel="icon" href="../NUEVO TPO/Imagenes/tambor.png"></script>
 </head>
 <body>
    
@@ -29,21 +29,34 @@
     <main>
 
     <h2>Para contrataciones, dejanos tu mensaje:</h2>
-    <form action="https://formspree.io/f/xrgdyjzp"
-    method="POST">
-    <label for="Nombre">Nombre</label> <input type="text"> <br> <br>
-    <label for="Apellido">Apellido</label> <input type="text"> <br> <br>
-    <label for="Ciudad">Ciudad</label> <input type="text"> <br> <br>
+    <form action="destino.html" onsubmit="return validacion();" id="formulario">
+    <label for="Nombre y apellido">Nombre</label> <input type="text"> <br> <br>
     <label for="Teléfono">Teléfono</label> <input type="number"> <br> <br>
     <textarea name="Comentario" id="Comentario" cols="100" rows="10">Comentario</textarea>
-    <button>Enviar mensaje</button>
+    <input type="submit" value="Enviar">
+    <input type="reset" value="Cancelar">
     </form>
 
     <h2>Contactános por WhatsApp</h2>
     <i class="fa-brands fa-whatsapp"></i>
     <a href="https://api.whatsapp.com/send?phone=5493515060475">Chatear con Orquesta Gibran Khalil Gibran</a>
     
-    
+    <script>
+function validacion()
+{
+    valor = document.getElementById("Nombre").value;
+    if( valor == null || valor.lenght == 0)
+    {
+        document.getElementaById('mensaje').innerHTML = "Debe completar el Nombre";
+        elemento = document.getElementById('nombre');
+        elemento.focus();
+
+        return false;
+    }
+    return true;
+}
+
+    </script>
 
     </main>
 
