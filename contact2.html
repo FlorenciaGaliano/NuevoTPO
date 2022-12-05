@@ -29,7 +29,7 @@
     <main>
 
     <h2>Para contrataciones, dejanos tu mensaje:</h2>
-    <form action="destino.html" onsubmit="return validacion();" id="formulario">
+    <form onsubmit="return validacion();" id="formulario">
     <label for="Nombre y apellido">Nombre</label> <input type="text"> <br> <br>
     <label for="Teléfono">Teléfono</label> <input type="number"> <br> <br>
     <textarea name="Comentario" id="Comentario" cols="100" rows="10">Comentario</textarea>
@@ -37,9 +37,6 @@
     <input type="reset" value="Cancelar">
     </form>
 
-    <h2>Contactános por WhatsApp</h2>
-    <i class="fa-brands fa-whatsapp"></i>
-    <a href="https://api.whatsapp.com/send?phone=5493515060475">Chatear con Orquesta Gibran Khalil Gibran</a>
     
     <script>
 function validacion()
@@ -48,16 +45,21 @@ function validacion()
     if( valor == null || valor.lenght == 0)
     {
         document.getElementaById('mensaje').innerHTML = "Debe completar el Nombre";
-        elemento = document.getElementById('nombre');
+        elemento = document.getElementById('Nombre');
         elemento.focus();
 
         return false;
     }
     return true;
 }
-
     </script>
 
+
+
+    <h2>Contactános por WhatsApp</h2>
+    <i class="fa-brands fa-whatsapp"></i>
+    <a href="https://api.whatsapp.com/send?phone=5493515060475">Chatear con Orquesta Gibran Khalil Gibran</a>
+    
     </main>
 
     <footer text-align: center;>
